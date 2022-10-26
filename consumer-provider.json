@@ -1,0 +1,65 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request with no type",
+      "providerState": "some state",
+      "request": {
+        "method": "get",
+        "path": "/endpoint"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "type": "none"
+        }
+      }
+    },
+    {
+      "description": "a request for type bar",
+      "providerState": "some state",
+      "request": {
+        "method": "get",
+        "path": "/endpoint",
+        "query": "type=bar"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "type": "bar"
+        }
+      }
+    },
+    {
+      "description": "a request for type foo",
+      "providerState": "some state",
+      "request": {
+        "method": "get",
+        "path": "/endpoint",
+        "query": "type=foo"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "type": "foo"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

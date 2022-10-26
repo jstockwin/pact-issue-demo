@@ -1,0 +1,142 @@
+I, [2022-10-26T10:07:38.419706 #111719]  INFO -- : Cleared interactions
+I, [2022-10-26T10:07:38.432916 #111719]  INFO -- : Registered expected interaction GET /endpoint
+D, [2022-10-26T10:07:38.433467 #111719] DEBUG -- : {
+  "description": "a request with no type",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "none"
+    }
+  },
+  "metadata": null
+}
+I, [2022-10-26T10:07:38.445653 #111719]  INFO -- : Received request GET /endpoint
+D, [2022-10-26T10:07:38.446122 #111719] DEBUG -- : {
+  "path": "/endpoint",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:8000",
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-10-26T10:07:38.446907 #111719]  INFO -- : Found matching response for GET /endpoint
+D, [2022-10-26T10:07:38.447229 #111719] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "type": "none"
+  }
+}
+I, [2022-10-26T10:07:38.458450 #111719]  INFO -- : Verifying - interactions matched
+I, [2022-10-26T10:07:38.470336 #111719]  INFO -- : Writing pact for Provider to /home/jake/dev/pact-issue-demo/consumer-provider.json
+I, [2022-10-26T10:07:38.485178 #111719]  INFO -- : Cleared interactions
+I, [2022-10-26T10:07:38.498560 #111719]  INFO -- : Registered expected interaction GET /endpoint?type=bar
+D, [2022-10-26T10:07:38.499100 #111719] DEBUG -- : {
+  "description": "a request for type bar",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint",
+    "query": {
+      "type": [
+        "bar"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "bar"
+    }
+  },
+  "metadata": null
+}
+I, [2022-10-26T10:07:38.513011 #111719]  INFO -- : Received request GET /endpoint?type=bar
+D, [2022-10-26T10:07:38.513478 #111719] DEBUG -- : {
+  "path": "/endpoint",
+  "query": "type=bar",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:8000",
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-10-26T10:07:38.514460 #111719]  INFO -- : Found matching response for GET /endpoint?type=bar
+D, [2022-10-26T10:07:38.514845 #111719] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "type": "bar"
+  }
+}
+I, [2022-10-26T10:07:38.527144 #111719]  INFO -- : Verifying - interactions matched
+I, [2022-10-26T10:07:38.540854 #111719]  INFO -- : Writing pact for Provider to /home/jake/dev/pact-issue-demo/consumer-provider.json
+I, [2022-10-26T10:07:38.558773 #111719]  INFO -- : Cleared interactions
+I, [2022-10-26T10:07:38.576434 #111719]  INFO -- : Registered expected interaction GET /endpoint?type=foo
+D, [2022-10-26T10:07:38.576932 #111719] DEBUG -- : {
+  "description": "a request for type foo",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint",
+    "query": {
+      "type": [
+        "foo"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "foo"
+    }
+  },
+  "metadata": null
+}
+I, [2022-10-26T10:07:38.593191 #111719]  INFO -- : Received request GET /endpoint?type=foo
+D, [2022-10-26T10:07:38.593914 #111719] DEBUG -- : {
+  "path": "/endpoint",
+  "query": "type=foo",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:8000",
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-10-26T10:07:38.595242 #111719]  INFO -- : Found matching response for GET /endpoint?type=foo
+D, [2022-10-26T10:07:38.595862 #111719] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "type": "foo"
+  }
+}
+I, [2022-10-26T10:07:38.609366 #111719]  INFO -- : Verifying - interactions matched
+I, [2022-10-26T10:07:38.627827 #111719]  INFO -- : Writing pact for Provider to /home/jake/dev/pact-issue-demo/consumer-provider.json

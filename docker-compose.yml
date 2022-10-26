@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  stub-service:
+    image: pactfoundation/pact-cli:latest
+    volumes:
+      - ./consumer-provider.json:/myfiles/consumer-provider.json
+    command: stub-service /myfiles/consumer-provider.json --port 8000 --host 0.0.0.0
+    ports:
+      - "8000:8000"

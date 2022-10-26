@@ -1,0 +1,132 @@
+INFO: Loading interactions from /myfiles/consumer-provider.json
+I, [2022-10-26T09:09:03.828774 #12]  INFO -- : Registered expected interaction GET /endpoint
+D, [2022-10-26T09:09:03.828831 #12] DEBUG -- : {
+  "description": "a request with no type",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "none"
+    }
+  },
+  "metadata": null
+}
+I, [2022-10-26T09:09:03.828847 #12]  INFO -- : Registered expected interaction GET /endpoint?type=bar
+D, [2022-10-26T09:09:03.828902 #12] DEBUG -- : {
+  "description": "a request for type bar",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint",
+    "query": {
+      "type": [
+        "bar"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "bar"
+    }
+  },
+  "metadata": null
+}
+I, [2022-10-26T09:09:03.828916 #12]  INFO -- : Registered expected interaction GET /endpoint?type=foo
+D, [2022-10-26T09:09:03.828937 #12] DEBUG -- : {
+  "description": "a request for type foo",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint",
+    "query": {
+      "type": [
+        "foo"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "foo"
+    }
+  },
+  "metadata": null
+}
+INFO  WEBrick 1.7.0
+e are tracking events anonymously to gather important usage statistics like Pact-Ruby version and operating system. To disable tracking, set the 'PACT_DO_NOT_TRACK' environment variable to 'true'.
+INFO  WEBrick 1.7.0
+INFO  ruby 2.7.6 (2022-04-12) [x86_64-linux-musl]
+INFO  WEBrick::HTTPServer#start: pid=12 port=8000
+I, [2022-10-26T09:09:06.760998 #12]  INFO -- : Received request GET /endpoint?type=bar
+D, [2022-10-26T09:09:06.761375 #12] DEBUG -- : {
+  "path": "/endpoint",
+  "query": "type=bar",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:8000",
+    "User-Agent": "curl/7.68.0",
+    "Accept": "*/*",
+    "Version": "HTTP/1.1"
+  }
+}
+W, [2022-10-26T09:09:06.762248 #12]  WARN -- : Multiple interactions found for GET /endpoint?type=bar:
+D, [2022-10-26T09:09:06.762524 #12] DEBUG -- : {
+  "description": "a request with no type",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "none"
+    }
+  },
+  "metadata": null
+}
+D, [2022-10-26T09:09:06.762790 #12] DEBUG -- : {
+  "description": "a request for type bar",
+  "providerState": "some state",
+  "request": {
+    "method": "get",
+    "path": "/endpoint",
+    "query": {
+      "type": [
+        "bar"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "type": "bar"
+    }
+  },
+  "metadata": null
+}
+W, [2022-10-26T09:09:06.762892 #12]  WARN -- : Sorting responses by response status and returning first.
+I, [2022-10-26T09:09:06.763232 #12]  INFO -- : Found matching response for GET /endpoint
+D, [2022-10-26T09:09:06.763443 #12] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "type": "none"
+  }
+}
